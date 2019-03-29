@@ -1,0 +1,21 @@
+{
+  "name": "tooltip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./scripts/fulcrum-tip.js -o ./lib/fulcrum-tip.compiled.js && uglifyjs --compress --mangle -o fulcrum-tip.min.js -- ./lib/fulcrum-tip.compiled.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "uglify-js": "^3.5.2"
+  }
+}
