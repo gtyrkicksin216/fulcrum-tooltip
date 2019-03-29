@@ -6,7 +6,6 @@
 
 const fulcrumTooltip = (tooltipStyles) => {
   let element = document.querySelectorAll(`[tip-text]`);
-  console.log(element);
 
   const createTip = (element, message) => {
     element.style.position = `relative`;
@@ -48,7 +47,8 @@ const fulcrumTooltip = (tooltipStyles) => {
   }
 
   const removeTip = (tooltip) => {
-    tooltip.remove();
+    // tooltip.remove();
+    tooltip.parentNode.removeChild(tooltip);
   }
 
   if (!!element) {
