@@ -6,6 +6,7 @@
 
 const fulcrumTooltip = (tooltipStyles) => {
   let element = document.querySelectorAll(`[tip-text]`);
+  console.log(element);
 
   const createTip = (element, message) => {
     element.style.position = `relative`;
@@ -51,9 +52,9 @@ const fulcrumTooltip = (tooltipStyles) => {
   }
 
   if (!!element) {
-    element.forEach(element => {
-      createTip(element, element.getAttribute(`tip-text`));
-    });
+    for (let i = 0; i < element.length; i++) {
+      createTip(element[i], element[i].getAttribute(`tip-text`));
+    }
   }
 }
 
